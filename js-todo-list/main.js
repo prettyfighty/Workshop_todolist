@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const newSpan = document.createElement('span');
     newSpan.classList.add('close');
     newSpan.textContent = 'x';
-    
+    // 新增的span都要能刪掉li
     newSpan.addEventListener('click', function(){
       this.parentNode.remove()
     })
@@ -29,34 +29,18 @@ document.addEventListener('DOMContentLoaded', function(){
     const newLi = document.createElement('li');
     newLi.textContent = liContent;
     newLi.appendChild(newSpan);
-
+    // 新增的li都要能被劃掉/還原
     newLi.addEventListener('click', function(){
       this.classList.toggle('checked');
     })
 
-
-
-
-
-
     return newLi;
   }
+
   document.getElementById('addBtn').addEventListener('click', function(){
     let liContent = document.querySelector('#input').value;
     document.querySelector('ul').appendChild(addLi(liContent));
     document.querySelector('#input').value = '';
-    // console.log(spans.length);
   })
-
-
-
-
-
-
-
-
-
-
-
 
 })
