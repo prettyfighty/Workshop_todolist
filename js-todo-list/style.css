@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
 }
-
+ 
 /* Remove margins and padding from the list */
 ul {
   margin: 0;
@@ -41,6 +41,7 @@ ul li.checked {
   color: #fff;
   text-decoration: line-through;
 }
+
 
 li:last-child {
   border-radius: 0 0 20px 20px;
